@@ -20,6 +20,7 @@
 <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script async src="js/nolt.js"></script>
 <script src="js/site.js"></script>
+<script type="module" src="js/auth.js"></script>
 </head>
 <body>
 <header>
@@ -42,14 +43,20 @@ Knowledgebase
 <hr class="navbar-hr m-0"/>
 </div>
 <div class="navbar-end">
-<div class="navbar-item no-hover">
+<div id="authButtons" class="navbar-item no-hover">
 <div class="buttons">
-<a class="button is-primary" href="https://dev.synapsesupport.io/Identity/Account/Register">
+<a class="button is-primary" href="register.html">
 <strong>Sign up</strong>
 </a>
-<a class="button is-light" href="https://dev.synapsesupport.io/Identity/Account/Login">
+<a class="button is-light" href="login.html">
 Log in
 </a>
+</div>
+</div>
+<div id="userMenu" class="navbar-item no-hover is-hidden">
+<div class="buttons">
+<span class="button is-static"><span id="userLabel"></span></span>
+<a id="logoutButton" class="button is-light" href="#">Log out</a>
 </div>
 </div>
 </div>
@@ -59,7 +66,7 @@ Log in
 <div id="knowledgebaseSearch" style="height: 25rem; top: -15px; position: relative; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
 <h3 class="title is-3" style="text-align: center; font-weight: bold; top: 35%; position: relative; text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">How can we help?</h3>
 <div style="display: flex; top: 35%; position: relative;">
-<input class="input" placeholder="Search for an issue you are having." style="width: 50%; text-align: center; margin: auto;"/>
+<input id="kbSearch" class="input" placeholder="Search for an issue you are having." style="width: 50%; text-align: center; margin: auto;"/>
 </div>
 </div>
 <script>
@@ -193,6 +200,22 @@ We use cookies to make your experience better.&nbsp;&nbsp;<a href="https://feari
 </div>
 </div>
 </div>
+<script>
+(function () {
+  var search = document.getElementById("kbSearch");
+  if (!search) return;
+  var cards = Array.prototype.slice.call(
+    document.querySelectorAll(".columns.is-mobile.is-multiline .column")
+  );
+  search.addEventListener("input", function () {
+    var q = search.value.trim().toLowerCase();
+    cards.forEach(function (col) {
+      var match = col.textContent.toLowerCase().indexOf(q) !== -1;
+      col.style.display = match ? "" : "none";
+    });
+  });
+})();
+</script>
 </section>
 </body>
 </html>
