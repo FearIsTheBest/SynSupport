@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/bulma-tooltip.min.css"/>
 <link rel="stylesheet" href="css/bulma-badge.min.css"/>
 <link rel="stylesheet" href="css/overrides.css"/>
-<link rel="stylesheet" href="lib/fontawesome/css/all.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
 <script src="lib/jquery/dist/jquery.min.js"></script>
 <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/site.js"></script>
@@ -76,14 +76,14 @@ Log in
 <label class="label" for="email">Email</label>
 <div class="control has-icons-left">
 <input class="input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required/>
-<span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+<span class="icon is-small is-left"><iconify-icon icon="mdi:email-outline"></iconify-icon></span>
 </div>
 </div>
 <div class="field">
 <label class="label" for="password">Password</label>
 <div class="control has-icons-left">
 <input class="input" type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password" required/>
-<span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+<span class="icon is-small is-left"><iconify-icon icon="mdi:lock-outline"></iconify-icon></span>
 </div>
 </div>
 <div class="field mt-5">
@@ -93,7 +93,7 @@ Log in
 
 <div class="has-text-centered my-3 has-text-grey">or</div>
 <button class="button is-light is-fullwidth" data-google-signin>
-<span class="icon"><i class="fab fa-google"></i></span>
+<span class="icon"><iconify-icon icon="logos:google-icon"></iconify-icon></span>
 <span>Continue with Google</span>
 </button>
 

@@ -40,10 +40,20 @@ using the same shape).
 
 ## Icons & favicon
 
-The original Wayback capture never included the Font Awesome **6.2.0** webfonts,
-so every icon was blank. The real webfonts are now vendored under
-`lib/fontawesome/webfonts/`, so all icons render. The site favicon (the Synapse
-"S") lives in `img/favicon/` and is wired into every page.
+Icons use [Iconify](https://iconify.design) via the `<iconify-icon>` web
+component (loaded from jsDelivr on every page). Drop an icon in anywhere with:
+
+```html
+<iconify-icon icon="mdi:email-outline"></iconify-icon>
+```
+
+Browse/search the full set at <https://icon-sets.iconify.design>. The site
+currently uses `mdi:*` glyphs for the auth forms and the full-colour
+`logos:google-icon` for the Google button. (The old, incompletely-archived
+Font Awesome webfonts have been removed.)
+
+The site favicon (the Synapse "S") lives in `img/favicon/` and is wired into
+every page.
 
 ## Authentication (Firebase)
 

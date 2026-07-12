@@ -77,7 +77,7 @@
           .map(function (a) {
             return (
               '<a class="panel-block" href="article.html?id=' + encodeURIComponent(a.id) + '">' +
-              '<span class="panel-icon"><i class="fa-solid fa-file-lines"></i></span>' +
+              '<span class="panel-icon"><iconify-icon icon="mdi:file-document-outline"></iconify-icon></span>' +
               esc(a.title) + "</a>"
             );
           })
