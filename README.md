@@ -17,13 +17,33 @@ All Wayback Machine and HTTrack artifacts have been stripped out:
 ```
 index.html            Knowledgebase landing page
 Knowledgebase.html    Same page (linked from the nav)
+category.html         Article list for a category  (?id=...)
+article.html          A single article             (?id=...)
 login.html            Log in page  (Firebase Auth)
 register.html         Sign up page (Firebase Auth)
 css/                  Bulma theme + overrides
-js/                   site.js, auth.js, firebase-config.js, nolt, toastr, purify
-lib/                  jQuery, Bootstrap, Font Awesome
-fonts/  img/          Web fonts + logos
+js/                   site.js, auth.js, firebase-config.js,
+                      kb-data.js, knowledgebase.js, nolt, toastr, purify
+lib/                  jQuery, Bootstrap, Font Awesome (+ vendored webfonts)
+fonts/  img/          Web fonts, logos, favicon set
 ```
+
+## Knowledgebase content
+
+The category cards, article lists and article pages are all rendered from one
+file: **`js/kb-data.js`**. Edit that to add/remove categories or articles — the
+card counts, category pages (`category.html?id=…`) and article pages
+(`article.html?id=…`) update automatically. Article `body` may contain simple
+HTML and is sanitised with DOMPurify before rendering. The starter articles are
+placeholders — swap in your real content (or, later, load it from Firestore
+using the same shape).
+
+## Icons & favicon
+
+The original Wayback capture never included the Font Awesome **6.2.0** webfonts,
+so every icon was blank. The real webfonts are now vendored under
+`lib/fontawesome/webfonts/`, so all icons render. The site favicon (the Synapse
+"S") lives in `img/favicon/` and is wired into every page.
 
 ## Authentication (Firebase)
 

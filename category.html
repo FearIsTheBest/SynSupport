@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Log in - Synapse Support</title>
+<title>Knowledgebase - Synapse Support</title>
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32.png"/>
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16.png"/>
 <link rel="icon" type="image/png" href="img/favicon/favicon-256.png"/>
@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="css/bulma-tooltip.min.css"/>
 <link rel="stylesheet" href="css/bulma-badge.min.css"/>
 <link rel="stylesheet" href="css/overrides.css"/>
+<link rel="stylesheet" href="css/markdown-dark.css"/>
 <link rel="stylesheet" href="lib/fontawesome/css/all.min.css"/>
 <script src="lib/jquery/dist/jquery.min.js"></script>
 <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -62,49 +63,10 @@ Log in
 </header>
 <section class="section">
 <div class="container">
-<div class="columns is-centered">
-<div class="column is-5-tablet is-4-desktop">
-<div class="card">
-<div class="card-content">
-<h3 class="title is-4 has-text-centered">Log in</h3>
-<p class="subtitle is-6 has-text-centered has-text-grey">Welcome back to Synapse Support.</p>
-
-<div id="authError" class="notification is-danger is-light is-hidden"></div>
-
-<form id="loginForm" novalidate>
-<div class="field">
-<label class="label" for="email">Email</label>
-<div class="control has-icons-left">
-<input class="input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required/>
-<span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
-</div>
-</div>
-<div class="field">
-<label class="label" for="password">Password</label>
-<div class="control has-icons-left">
-<input class="input" type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password" required/>
-<span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
-</div>
-</div>
-<div class="field mt-5">
-<button type="submit" class="button is-primary is-fullwidth"><strong>Log in</strong></button>
-</div>
-</form>
-
-<div class="has-text-centered my-3 has-text-grey">or</div>
-<button class="button is-light is-fullwidth" data-google-signin>
-<span class="icon"><i class="fab fa-google"></i></span>
-<span>Continue with Google</span>
-</button>
-
-<p class="has-text-centered mt-5">
-Don't have an account? <a href="register.html">Sign up</a>
-</p>
-</div>
-</div>
-</div>
-</div>
+<div id="kbCategory"></div>
 </div>
 </section>
+<script src="js/kb-data.js"></script>
+<script src="js/knowledgebase.js"></script>
 </body>
 </html>
