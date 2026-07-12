@@ -11,12 +11,13 @@
 // ---------------------------------------------------------------------------
 
 export const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyD09rWVVnAyNy3yCxsCEOegK7qHwLVc8EA",
+  authDomain: "synsupport.firebaseapp.com",
+  projectId: "synsupport",
+  storageBucket: "synsupport.firebasestorage.app",
+  messagingSenderId: "702056396003",
+  appId: "1:702056396003:web:8fdafb94d225e84329c1d6",
+  measurementId: "G-GZQV1P9G9N"
 };
 
 // true once the placeholders above have been replaced with real values.
