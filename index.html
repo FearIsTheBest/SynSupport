@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Knowledgebase - Synapse Support</title>
+<link rel="stylesheet" href="fonts/opensans.css"/>
+<link rel="stylesheet" href="css/bulmaswatch.min.css"/>
+<link rel="stylesheet" href="css/bulma-tooltip.min.css"/>
+<link rel="stylesheet" href="css/bulma-badge.min.css"/>
+<link rel="stylesheet" href="css/overrides.css"/>
+<link rel="stylesheet" href="css/markdown-dark.css"/>
+<link rel="stylesheet" href="js/build/toastr.min.css"/>
+<link rel="stylesheet" href="css/tinymce.css"/>
+<link rel="stylesheet" href="lib/fontawesome/css/all.min.css"/>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/jquery/dist/jquery.unobtrusive-ajax.min.js"></script>
+<script src="js/build/toastr.min.js"></script>
+<script src="js/dist/purify.min.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script async src="js/nolt.js"></script>
+<script src="js/site.js"></script>
+</head>
+<body>
+<header>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+<div class="navbar-brand is-dark">
+<a class="navbar-item" href="index.html">
+<img src="img/syn_full.png" width="112" height="28" alt="Synapse Logo">
+</a>
+<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+</a>
+</div>
+<div id="navbar" class="navbar-menu is-dark">
+<div class="navbar-start">
+<a class="navbar-item" href="Knowledgebase.html">
+Knowledgebase
+</a>
+<hr class="navbar-hr m-0"/>
+</div>
+<div class="navbar-end">
+<div class="navbar-item no-hover">
+<div class="buttons">
+<a class="button is-primary" href="https://dev.synapsesupport.io/Identity/Account/Register">
+<strong>Sign up</strong>
+</a>
+<a class="button is-light" href="https://dev.synapsesupport.io/Identity/Account/Login">
+Log in
+</a>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div id="knowledgebaseSearch" style="height: 25rem; top: -15px; position: relative; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+<h3 class="title is-3" style="text-align: center; font-weight: bold; top: 35%; position: relative; text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">How can we help?</h3>
+<div style="display: flex; top: 35%; position: relative;">
+<input class="input" placeholder="Search for an issue you are having." style="width: 50%; text-align: center; margin: auto;"/>
+</div>
+</div>
+<script>
+function getLoginBg() {
+  const dateTime = new Date();
+  const dateHours = dateTime.getHours();
+
+  if (dateHours >= 5 && dateHours < 12) {
+    return 2;
+  } else if (dateHours >= 12 && dateHours < 17) {
+    return 4;
+  } else if (dateHours >= 17 && dateHours < 21) {
+    return 3;
+  } else {
+    return 1;
+  }
+}
+
+$search = $("#knowledgebaseSearch");
+$search.css("background", `url('img/${getLoginBg()}.jpg') no-repeat center top`);
+$search.css("background-size", "cover");
+</script>
+<section class="section" style="padding-top: 0;">
+<div class="container">
+<div id="consentCookies" class="notification m-6" role="alert" style="display: flex !important; align-items: center; padding: 20px;">
+<div class="columns is-tablet is-vcentered" style="width:100%;">
+<p class="column is-narrow has-text-centered-mobile">
+We use cookies to make your experience better.&nbsp;&nbsp;<a href="https://x.synapse.to/Contract.pdf" target="_blank">Learn More</a>.
+</p>
+<div class="column is-hidden-mobile"></div>
+<div class="column is-narrow has-text-centered-mobile">
+<button type="button" class="accept-policy close button is-primary is-small" style="margin-left: auto;" data-dismiss="alert" aria-label="Close" data-cookie-string="CNST=yes; expires=Tue, 26 Mar 2024 21:36:42 GMT; path=/; samesite=strict">
+<span aria-hidden="true">Accept</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+        (function () {
+            var button = document.querySelector("#consentCookies button[data-cookie-string]");
+            button.addEventListener("click", function (event) {
+                document.cookie = button.dataset.cookieString;
+                document.getElementById("consentCookies").remove();
+            }, false);
+        })();
+    </script>
+<div class="columns is-mobile is-multiline mt-1">
+<div class="column is-one-third-desktop is-half-tablet is-full-mobile">
+<div class="card">
+<div class="card-content">
+<div style="display: flex;">
+<img src="img/syn_small_white.png" alt="Getting Started" style="margin: auto;" height="70" width="70"/>
+</div>
+<h5 class="title is-5 mt-4 mb-0" style="text-align: center; font-weight: bold;">Getting Started</h5>
+<h5 class="subtitle is-5 mt-1" style="text-align: center; font-weight: lighter; font-size: 12pt;">Learn how to get support via this site, purchase Synapse, create your account, and more.</h5>
+<div style="display: flex;">
+<a style="margin: auto" href="https://dev.synapsesupport.io/Knowledgebase?category=d3ca4d2e-35b7-4112-a999-0d8dacc476df">{items} articles</a>
+</div>
+</div>
+</div>
+</div>
+<div class="column is-one-third-desktop is-half-tablet is-full-mobile">
+<div class="card">
+<div class="card-content">
+<div style="display: flex;">
+<img src="img/syn_small_white.png" alt="Common Errors" style="margin: auto;" height="70" width="70"/>
+</div>
+<h5 class="title is-5 mt-4 mb-0" style="text-align: center; font-weight: bold;">Common Errors</h5>
+<h5 class="subtitle is-5 mt-1" style="text-align: center; font-weight: lighter; font-size: 12pt;">Here you can learn about some of the issues we see popping up regularly.</h5>
+<div style="display: flex;">
+<a style="margin: auto" href="https://dev.synapsesupport.io/Knowledgebase?category=90642062-d6c9-4632-9313-38c4771e4cd0">{items} articles</a>
+</div>
+</div>
+</div>
+</div>
+<div class="column is-one-third-desktop is-half-tablet is-full-mobile">
+<div class="card">
+<div class="card-content">
+<div style="display: flex;">
+<img src="img/syn_small_white.png" alt="Reporting" style="margin: auto;" height="70" width="70"/>
+</div>
+<h5 class="title is-5 mt-4 mb-0" style="text-align: center; font-weight: bold;">Reporting</h5>
+<h5 class="subtitle is-5 mt-1" style="text-align: center; font-weight: lighter; font-size: 12pt;">Learn how to make a proper bug report or support request.</h5>
+<div style="display: flex;">
+<a style="margin: auto" href="https://dev.synapsesupport.io/Knowledgebase?category=19ae676a-7611-45c1-a579-a3b7b3522dc2">{items} articles</a>
+</div>
+</div>
+</div>
+</div>
+<div class="column is-one-third-desktop is-half-tablet is-full-mobile">
+<div class="card">
+<div class="card-content">
+<div style="display: flex;">
+<img src="img/syn_small_white.png" alt="Integrations" style="margin: auto;" height="70" width="70"/>
+</div>
+<h5 class="title is-5 mt-4 mb-0" style="text-align: center; font-weight: bold;">Integrations</h5>
+<h5 class="subtitle is-5 mt-1" style="text-align: center; font-weight: lighter; font-size: 12pt;">Find out more about integrations in Synapse X and how they can improve your experience.</h5>
+<div style="display: flex;">
+<a style="margin: auto" href="https://dev.synapsesupport.io/Knowledgebase?category=9b5cdcf9-5aee-4d51-8754-a83f6100587b">{items} articles</a>
+</div>
+</div>
+</div>
+</div>
+<div class="column is-one-third-desktop is-half-tablet is-full-mobile">
+<div class="card">
+<div class="card-content">
+<div style="display: flex;">
+<img src="img/syn_small_white.png" alt="Account Management" style="margin: auto;" height="70" width="70"/>
+</div>
+<h5 class="title is-5 mt-4 mb-0" style="text-align: center; font-weight: bold;">Account Management</h5>
+<h5 class="subtitle is-5 mt-1" style="text-align: center; font-weight: lighter; font-size: 12pt;">Helpful tips to keep your account safe and how to change information such as your email and password.</h5>
+<div style="display: flex;">
+<a style="margin: auto" href="https://dev.synapsesupport.io/Knowledgebase?category=3f448f31-2b6d-44a3-b57c-a92cfdc0acee">{items} articles</a>
+</div>
+</div>
+</div>
+</div>
+<div class="column is-one-third-desktop is-half-tablet is-full-mobile">
+<div class="card">
+<div class="card-content">
+<div style="display: flex;">
+<img src="img/syn_small_white.png" alt="Developing Scripts" style="margin: auto;" height="70" width="70"/>
+</div>
+<h5 class="title is-5 mt-4 mb-0" style="text-align: center; font-weight: bold;">Developing Scripts</h5>
+<h5 class="subtitle is-5 mt-1" style="text-align: center; font-weight: lighter; font-size: 12pt;">Introduction to creating your first script as well as the various Synapse APIs.</h5>
+<div style="display: flex;">
+<a style="margin: auto" href="https://dev.synapsesupport.io/Knowledgebase?category=94567c0e-9169-4384-b498-7c6c107f0dc9">{items} articles</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>
